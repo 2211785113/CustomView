@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/btn_padding">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@color/gray"
+            android:onClick="clock"
+            android:text="Clockview"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="circle"
+            android:text="circleView"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="progress"
+            android:text="progressbar"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="myview"
+            android:text="textmoveview"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="searchedittext"
+            android:text="searchedittext"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="pullrefreshlayout"
+            android:text="pullrefreshlayout"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="horizontalscrollviewex"
+            android:text="horizontalscrollviewex"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="waveview"
+            android:text="waveview"
+            android:textSize="@dimen/btn_text_size" />
+
+    </LinearLayout>
+
+</ScrollView>
