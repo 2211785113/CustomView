@@ -418,7 +418,7 @@ computeScrollOffset 方法源码：自行查看。
 
 <br/>
 
-总：滑动方式的对比：
+### 总：滑动方式的对比：
 
 scrollTo/scrollBy：专门用于View的滑动。
 
@@ -450,7 +450,7 @@ View动画/Android3.0以下属性动画：
 
 <br/>
 
-总：
+### 总：
 
 scrollTo/scrollBy：操作简单，适合对View内容的滑动
 
@@ -511,7 +511,7 @@ View的生命周期：https://blog.csdn.net/jyw935478490/article/details/6939724
 
 <br/>
 
-工作流程：
+### 工作流程：
 
 measure：测量-确定View的测量宽/高
 
@@ -521,7 +521,7 @@ draw：绘制-将View绘制到屏幕上
 
 <br/>
 
-自定义属性：
+### 自定义属性：
 
 第一步：res-values目录下创建自定义属性的xml，比如attrs.xml，或以attrs_开头的文件名(如attrs_circle_view.xml)，会自动生成R.attr类，有属性id.
 declare-styleable：自定义属性集合CircleView，集合里可以有很多自定义属性。
@@ -562,7 +562,7 @@ app：自定义属性的前缀，也可以换其他名字。一致即可。
 
 <br/>
 
-思考：自定义属性怎么获取xml中的值的？
+### 思考：自定义属性怎么获取xml中的值的？
 
 https://blog.csdn.net/lmj623565791/article/details/45022631
 
@@ -570,7 +570,7 @@ https://blog.csdn.net/wzy_1988/article/details/49619773
 
 <br/>
 
-分类：
+### 分类：
 
 分类1：继承View，重写onDraw
 
@@ -694,13 +694,15 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
 <br/>
 
-注意事项：
+### 注意事项：
 
 后果：注意事项处理不好可能会影响View的正常使用或内存泄漏。
 
 1.尽量不要在View中使用Handler。
 
 因为view内部本身就提供了post系列的方法，完全可以替代Handler的作用，除非非常明确要使用Handler来发送消息。
+
+<br/>
 
 2.View中如果有线程或者动画，需要及时停止，参考View#onDetachedFromWindow
 
@@ -720,15 +722,15 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
 <br/>
 
-画笔画布
+### 画笔画布
 
 <br/>
 
-绘制渲染优化
+### 绘制渲染优化
 
 <br/>
 
-过度渲染优化
+### 过度渲染优化
 
 <br/>
 
