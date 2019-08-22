@@ -14,6 +14,7 @@ import com.example.ruru.customview.R;
 /**
  * 仿微信ios搜索框
  * 可以看看github的第一个和第二个
+ * 可以再拓展一个ClearEditText
  */
 public class SearchEditText extends AppCompatEditText {
 
