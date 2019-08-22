@@ -8,7 +8,6 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.NonNull;
 
-
 public class RingDrawable extends RefreshDrawable {
 
     private static final int MAX_LEVEL = 200;

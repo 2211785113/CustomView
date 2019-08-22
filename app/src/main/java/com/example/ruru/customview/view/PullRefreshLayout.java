@@ -24,6 +24,16 @@ import com.example.ruru.customview.R;
 import com.example.ruru.customview.drawable.IRefreshDrawable;
 import com.example.ruru.customview.drawable.RingDrawable;
 
+/**
+ * 仿照SwipeRefreshLayout：
+ * SwipeRefreshLayout源码解析：https://blog.csdn.net/tellh/article/details/50782653
+ * onMeasure：先完成自己的测量，再完成子元素的测量递归调用
+ * onLayout：父View和子View都用layout确定位置
+ * <p>
+ * 刚开始：控件隐藏。
+ * 下拉刷新onTouchEvent：父View拦截事件
+ * 刷新的动画。
+ */
 public class PullRefreshLayout extends ViewGroup {
 
     private static final float DECELERATE_INTERPOLATION_FACTOR = 2f;
@@ -31,9 +41,15 @@ public class PullRefreshLayout extends ViewGroup {
     private static final int INVALID_POINTER = -1;
     private static final float DRAG_RATE = .5f;
 
+    //整个View控件
     private View mTarget;
+
+    //刷新View控件
     private ImageView mRefreshView;
+
+    //动画插值器
     private Interpolator mDecelerateInterpolator;
+
     private int mTouchSlop;
     private int mSpinnerFinalOffset;
     private int mTotalDragDistance;
@@ -70,10 +86,13 @@ public class PullRefreshLayout extends ViewGroup {
         mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         int defaultDuration = getResources().getInteger(android.R.integer.config_mediumAnimTime);
+
         mDurationToStartPosition = defaultDuration;
         mDurationToCorrectPosition = defaultDuration;
         mSpinnerFinalOffset = mTotalDragDistance = dp2px(DRAG_MAX_DISTANCE);
+
         mRefreshView = new ImageView(context);
+
         if (colorsId > 0) {
             mColorSchemeColors = context.getResources().getIntArray(colorsId);
         } else {
@@ -83,10 +102,13 @@ public class PullRefreshLayout extends ViewGroup {
         if (colorId > 0) {
             mColorSchemeColors = new int[]{ContextCompat.getColor(context, colorId)};
         }
+
         setDefaultRefreshStyle();
+
         mRefreshView.setVisibility(View.GONE);
 
         setWillNotDraw(false);
+
         ViewCompat.setChildrenDrawingOrderEnabled(this, true);
     }
 
@@ -118,18 +140,28 @@ public class PullRefreshLayout extends ViewGroup {
         return mSpinnerFinalOffset;
     }
 
+    /**
+     * View：measure方法完成测量
+     * ViewGroup：完成自己的测量+遍历调用所有子元素的measure方法，各个子元素再递归执行这个流程。
+     * <p>
+     * 注意：ViewGroup完成自己的测量，处理padding。
+     *
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         ensureTarget();
+
         if (mTarget == null)
             return;
 
         widthMeasureSpec = MeasureSpec.makeMeasureSpec(getMeasuredWidth() - getPaddingRight() - getPaddingLeft(), MeasureSpec.EXACTLY);
         heightMeasureSpec = MeasureSpec.makeMeasureSpec(getMeasuredHeight() - getPaddingTop() - getPaddingBottom(), MeasureSpec.EXACTLY);
         mTarget.measure(widthMeasureSpec, heightMeasureSpec);
-        mRefreshView.measure(widthMeasureSpec, heightMeasureSpec);
+        mRefreshView.measure(widthMeasureSpec, heightMeasureSpec);//？？？
     }
 
     private void ensureTarget() {
@@ -151,7 +183,7 @@ public class PullRefreshLayout extends ViewGroup {
             return false;
         }
 
-        final int action = MotionEventCompat.getActionMasked(ev);
+        final int action = ev.getActionMasked();
 
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -160,6 +192,7 @@ public class PullRefreshLayout extends ViewGroup {
                 }
                 mActivePointerId = ev.getPointerId(0);
                 mIsBeingDragged = false;
+
                 final float initialMotionY = getMotionEventY(ev, mActivePointerId);
                 if (initialMotionY == -1) {
                     return false;
@@ -204,7 +237,7 @@ public class PullRefreshLayout extends ViewGroup {
             return super.onTouchEvent(ev);
         }
 
-        final int action = MotionEventCompat.getActionMasked(ev);
+        final int action = ev.getActionMasked();
 
         switch (action) {
             case MotionEvent.ACTION_MOVE: {
@@ -466,6 +499,15 @@ public class PullRefreshLayout extends ViewGroup {
         }
     }
 
+    /**
+     * layout方法确定位置
+     *
+     * @param changed
+     * @param l
+     * @param t
+     * @param r
+     * @param b
+     */
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
 

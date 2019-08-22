@@ -10,11 +10,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.TypedValue;
 
-/**
- * RefreshDrawable
- * Created by simon on 17-5-13.
- */
-
 public abstract class RefreshDrawable extends Drawable implements IRefreshDrawable {
 
     private Context mContext;
