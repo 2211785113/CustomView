@@ -722,15 +722,11 @@ protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
 <br/>
 
-### 画笔画布
+画笔画布
 
-<br/>
+绘制渲染优化
 
-### 绘制渲染优化
-
-<br/>
-
-### 过度渲染优化
+过度渲染优化
 
 <br/>
 
