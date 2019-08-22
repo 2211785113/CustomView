@@ -1,8 +1,57 @@
 # CustomView
 自定义View大合集
 
+### 示例
 
-# 目录
+圆形ImageView：
+
+* [CircleView（分类3）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView.java)
+
+* [CircleView1（分类3）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView1.java)
+
+* [CircleView2（分类1）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView2.java)
+
+自定义时钟：
+
+* [ClockView（分类1）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/ClockView.java)
+
+水平滚动View：
+
+* [HorizontalScrollViewEx（分类2）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/HorizontalScrollViewEx.java)
+
+View的滑动：
+
+* [MoveView（layout/offsetTopAndBottom/LayoutParams）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView1.java)
+
+* [MoveView1（动画）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView2.java)
+
+下拉刷新控件：
+
+* [PullRefreshLayout（仿SwipeRefreshLayout）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/PullRefreshLayout.java)
+
+圆形进度条：
+
+* [RoundProgressBar](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/RoundProgressBar.java)
+
+搜索框：
+
+* [SearchEditText（仿微信ios的搜索框）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/SearchEditText.java)
+
+字体移动：
+
+* [TextMoveView](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/TextMoveView.java)
+
+* [TextMoveView1](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/TextMoveView1.java)
+
+波浪控件：
+
+* [WaveView](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/WaveView.java)
+
+<br/>
+
+****
+
+## View知识大盘点目录
 
 * View的定义
 
@@ -27,7 +76,7 @@
 * 进阶学习
 
 
-# 1.View的定义
+## 1.View的定义
 
 View：Android中所有控件的基类。单个控件或多个控件组成的一组控件。
 
@@ -38,7 +87,7 @@ View树结构类似于Web前端DOM树
 部分继承关系：(见图viewExtends.jpg)
 
 
-# 2.View的坐标系（见图viewLocation.png）
+## 2.View的坐标系（见图viewLocation.png）
 
 Android坐标系：
 
@@ -61,7 +110,7 @@ View坐标系：
 * 获取宽高-getWidth/getHeight或者getRight()-getLeft()/getBottom()-getTop()(见view源码两者效果同)。
 
 
-# 3.MotionEvent
+## 3.MotionEvent
 
 是什么：触摸事件
 
@@ -84,7 +133,7 @@ View坐标系：
 https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 
 
-# 4.mTouchSlop
+## 4.mTouchSlop
 
 是什么：最小滑动距离
 
@@ -97,7 +146,7 @@ https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 怎么样：获取-见源码
 
 
-# 5.VelocityTracker
+## 5.VelocityTracker
 
 是什么：速度追踪器，onTouchEvent中追踪触摸事件滑动过程中的速度，实现滑动fling或其他手势。
 
@@ -115,7 +164,7 @@ https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 * clear：重置为最初的状态
 
 
-# 6.GestureDetector
+## 6.GestureDetector
 
 是什么：手势监测器，监听用户的单击，滚动，长按，滑动，双击行为
 
@@ -193,7 +242,7 @@ GestureDetector：手势事件：单击，双击，滑动，长按，onTouchEven
 滑动相关：onTouchEvent中实现；监听双击行为：GestureDetector
 
 
-# 7.View的滑动
+## 7.View的滑动
 
 基本思想：当点击事件传到View时，系统记下触摸点的坐标，手指移动时系统记下移动后触摸的坐标并算出偏移量，并通过偏移量来修改View的坐标。
 
@@ -459,7 +508,7 @@ scrollTo/scrollBy：操作简单，适合对View内容的滑动
 改变布局参数：操作稍微复杂，适用于有交互的View。
 
 
-# 8.View的动画
+## 8.View的动画
 
 分类：
 
@@ -505,7 +554,7 @@ Animator框架使用最多：
 
 例子：贝塞尔曲线动画的实现
 
-# 9.自定义View
+## 9.自定义View
 
 View的生命周期：https://blog.csdn.net/jyw935478490/article/details/69397248
 
@@ -765,11 +814,11 @@ OpenGL开发模式：
 然后绘图，绘图完成，调用canvas.restore将之前保存的Matrix出栈，这样就将当前绘图坐标系恢复到了canvas.save执行时候的状态。
 
 
-# 10.滑动冲突
+## 10.滑动冲突
 
 参考：https://www.jianshu.com/p/916a7bab7ef1
 
-# 11.进阶学习
+## 11.进阶学习
 
 书籍：自定义控件很简单
 
