@@ -21,9 +21,9 @@
 
 View的滑动：
 
-* [MoveView（layout/offsetTopAndBottom/LayoutParams）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView1.java)
+* [MoveView（layout/offsetTopAndBottom/LayoutParams）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/MoveView.java)
 
-* [MoveView1（动画）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/CircleView2.java)
+* [MoveView1（动画）](https://github.com/2211785113/CustomView/blob/master/app/src/main/java/com/example/ruru/customview/view/MoveView1.java)
 
 下拉刷新控件：
 
