@@ -47,8 +47,8 @@
     </declare-styleable>
 
     <declare-styleable name="PullRefreshLayout">
-        <attr name="refreshColors" format="reference"/>
-        <attr name="refreshColor" format="reference"/>
+        <attr name="refreshColors" format="reference" />
+        <attr name="refreshColor" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="WaveView">

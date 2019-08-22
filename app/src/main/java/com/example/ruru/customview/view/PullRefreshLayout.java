@@ -60,10 +60,13 @@ public class PullRefreshLayout extends ViewGroup {
 
     public PullRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+
+        //自定义属性
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PullRefreshLayout);
         final int colorsId = a.getResourceId(R.styleable.PullRefreshLayout_refreshColors, 0);
         final int colorId = a.getResourceId(R.styleable.PullRefreshLayout_refreshColor, 0);
         a.recycle();
+
         mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         int defaultDuration = getResources().getInteger(android.R.integer.config_mediumAnimTime);

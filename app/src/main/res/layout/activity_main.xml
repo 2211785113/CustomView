@@ -84,6 +84,24 @@
             android:text="waveview"
             android:textSize="@dimen/btn_text_size" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="moveview"
+            android:text="moveview"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/btn_padding"
+            android:background="@color/gray"
+            android:onClick="moveview1"
+            android:text="moveview1"
+            android:textSize="@dimen/btn_text_size" />
+
     </LinearLayout>
 
 </ScrollView>

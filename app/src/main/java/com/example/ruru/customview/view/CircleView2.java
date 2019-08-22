@@ -72,6 +72,8 @@ public class CircleView2 extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        getX();
+
         int paddingLeft = getPaddingLeft();
         int paddingRight = getPaddingRight();
         int paddingTop = getPaddingTop();

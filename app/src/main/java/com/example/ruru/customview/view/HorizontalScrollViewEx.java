@@ -110,10 +110,12 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 mVelocityTracker.computeCurrentVelocity(1000);
                 float xVelocity = mVelocityTracker.getXVelocity();
 
+                //如果x方向向右移动的速度大于50
                 if (Math.abs(xVelocity) >= 50) {
+                    //如果x方向移动速度>0即向右移动,那么子view的索引-1,否则+1
                     mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
                 } else {
-                    mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
+                    mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;//子view的索引
                 }
                 mChildIndex = Math.max(0, Math.min(mChildIndex, mChildrenSize - 1));
                 int dx = mChildIndex * mChildWidth - scrollX;
@@ -203,6 +205,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
     }
 
     private void smoothScrollBy(int dx, int dy) {
+        //View的滑动：Scroller
         mScroller.startScroll(getScrollX(), 0, dx, 0, 500);
         invalidate();
     }
@@ -210,6 +213,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
     @Override
     public void computeScroll() {
         if (mScroller.computeScrollOffset()) {
+            //View的滑动：scrollTo：只滑动view的内容，不滑动view的位置
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             //非UI线程中用postInvalidate
             postInvalidate();

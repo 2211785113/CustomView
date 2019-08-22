@@ -23,7 +23,9 @@
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.PullRefreshLayoutActivity" />
         <activity android:name=".activity.HorizontalSVActivity" />
-        <activity android:name=".activity.WaveActivity"></activity>
+        <activity android:name=".activity.WaveActivity" />
+        <activity android:name=".activity.MoveViewActivity" />
+        <activity android:name=".activity.MoveView1Activity"></activity>
     </application>
 
 </manifest>

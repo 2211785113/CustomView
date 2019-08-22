@@ -8,6 +8,8 @@ import android.view.View;
 import com.example.ruru.customview.activity.CircleActivity;
 import com.example.ruru.customview.activity.ClockActivity;
 import com.example.ruru.customview.activity.HorizontalSVActivity;
+import com.example.ruru.customview.activity.MoveView1Activity;
+import com.example.ruru.customview.activity.MoveViewActivity;
 import com.example.ruru.customview.activity.PullRefreshLayoutActivity;
 import com.example.ruru.customview.activity.SearchActivity;
 import com.example.ruru.customview.activity.TextMoveActivity;
@@ -60,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void waveview(View v) {
         Intent intent = new Intent(this, WaveActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveview(View v) {
+        Intent intent = new Intent(this, MoveViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveview1(View v) {
+        Intent intent = new Intent(this, MoveView1Activity.class);
         startActivity(intent);
     }
 }
