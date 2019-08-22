@@ -3,6 +3,7 @@
 
 
 # 目录
+
 * View的定义
 
 * View的坐标系
@@ -26,7 +27,8 @@
 * 进阶学习
 
 
-### 1.View的定义
+# 1.View的定义
+
 View：Android中所有控件的基类。单个控件或多个控件组成的一组控件。
 
 ViewGroup：控件组，包含多个控件。ViewGroup内部可以有子View，子View还可以是ViewGroup。
@@ -36,7 +38,8 @@ View树结构类似于Web前端DOM树
 部分继承关系：(见图viewExtends.jpg)
 
 
-### 2.View的坐标系（见图viewLocation.png）
+# 2.View的坐标系（见图viewLocation.png）
+
 Android坐标系：
 
 是什么：屏幕左上角为坐标原点；
@@ -58,7 +61,8 @@ View坐标系：
 * 获取宽高-getWidth/getHeight或者getRight()-getLeft()/getBottom()-getTop()(见view源码两者效果同)。
 
 
-### 3.MotionEvent
+# 3.MotionEvent
+
 是什么：触摸事件
 
 为什么：可以用作点击事件
@@ -80,7 +84,8 @@ View坐标系：
 https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 
 
-### 4.mTouchSlop
+# 4.mTouchSlop
+
 是什么：最小滑动距离
 
 为什么：
@@ -92,7 +97,7 @@ https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 怎么样：获取-见源码
 
 
-### 5.VelocityTracker
+# 5.VelocityTracker
 
 是什么：速度追踪器，onTouchEvent中追踪触摸事件滑动过程中的速度，实现滑动fling或其他手势。
 
@@ -110,7 +115,8 @@ https://blog.csdn.net/zhyxuexijava/article/details/51611037?locationNum=11
 * clear：重置为最初的状态
 
 
-### 6.GestureDetector
+# 6.GestureDetector
+
 是什么：手势监测器，监听用户的单击，滚动，长按，滑动，双击行为
 
 为什么：因为view的onTouch只能实现一些简单的按下，移动，抬起手势，于是Android sdk就提供了复杂的手势单击，滚动，长按，滑动，双击行为。
@@ -187,7 +193,8 @@ GestureDetector：手势事件：单击，双击，滑动，长按，onTouchEven
 滑动相关：onTouchEvent中实现；监听双击行为：GestureDetector
 
 
-### 7.View的滑动
+# 7.View的滑动
+
 基本思想：当点击事件传到View时，系统记下触摸点的坐标，手指移动时系统记下移动后触摸的坐标并算出偏移量，并通过偏移量来修改View的坐标。
 
 滑动场景：下拉刷新
@@ -198,7 +205,7 @@ GestureDetector：手势事件：单击，双击，滑动，长按，onTouchEven
 
 滑动方法：
 
-##### 第一种：layout()
+### 第一种：layout()
 
 为什么：
 
@@ -214,7 +221,7 @@ GestureDetector：手势事件：单击，双击，滑动，长按，onTouchEven
 
 效果：正方形会随手指的滑动改变自己的位置。
 
-##### 第二种：offsetLeftAndRight()与offsetTopAndBottom()
+### 第二种：offsetLeftAndRight()与offsetTopAndBottom()
 
 怎么样：
 
@@ -222,7 +229,7 @@ GestureDetector：手势事件：单击，双击，滑动，长按，onTouchEven
 
 例子：MoveView
 
-##### 第三种：LayoutParams
+### 第三种：LayoutParams
 
 是什么：LayoutParams：保存了View的布局参数。所以可以改变布局参数从而改变位置。
 
@@ -243,7 +250,7 @@ params.leftMargin += 100;
 button.requestLayout();
 ```
 
-##### 第四种：动画
+### 第四种：动画
 
 怎么样：View平移，操作View的translationX和translationY属性。
 
@@ -294,7 +301,7 @@ ObjectAnimator.ofFloat(mTextView, "translationX", 0, 100).setDuration(100).start
 
 例子：MoveView1
 
-##### 第五种：scrollBy，scrollTo
+### 第五种：scrollBy，scrollTo
 
 scrollBy(dx,dy)：表示移动的增量为dx，dy。里边调用了scrollTo。
 
@@ -333,10 +340,9 @@ mScrollY：值=View上边缘和View内容上边缘在竖直方向的距离
 
 例子：view右滑：((View)getParent()).scrollBy(-offsetX,-offsetY);
 
-##### 第六种：Scroller。
+### 第六种：Scroller。
 
 怎么样：
-
 
 第一步：调用new Scroller()。
 
@@ -453,7 +459,7 @@ scrollTo/scrollBy：操作简单，适合对View内容的滑动
 改变布局参数：操作稍微复杂，适用于有交互的View。
 
 
-### 8.View的动画
+# 8.View的动画
 
 分类：
 
@@ -499,7 +505,7 @@ Animator框架使用最多：
 
 例子：贝塞尔曲线动画的实现
 
-### 9.自定义View
+# 9.自定义View
 
 View的生命周期：https://blog.csdn.net/jyw935478490/article/details/69397248
 
@@ -761,12 +767,11 @@ OpenGL开发模式：
 然后绘图，绘图完成，调用canvas.restore将之前保存的Matrix出栈，这样就将当前绘图坐标系恢复到了canvas.save执行时候的状态。
 
 
-### 10.滑动冲突
+# 10.滑动冲突
 
 参考：https://www.jianshu.com/p/916a7bab7ef1
 
-
-### 11.进阶学习
+# 11.进阶学习
 
 书籍：自定义控件很简单
 
