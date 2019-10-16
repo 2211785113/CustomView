@@ -814,7 +814,7 @@ OpenGL开发模式：
 然后绘图，绘图完成，调用canvas.restore将之前保存的Matrix出栈，这样就将当前绘图坐标系恢复到了canvas.save执行时候的状态。
 
 
-### 10.滑动冲突
+### 10.滑动冲突(包含事件分发机制)
 
 参考：https://www.jianshu.com/p/916a7bab7ef1
 
