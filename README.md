@@ -679,7 +679,7 @@ wrap_content需要处理。
 
 因为：如果View在布局中使用wrap_content，那么它的specMode是AT_MOST模式，在这种模式下，它的宽高等于specSize。
 
-查表(见table.jpg)：
+![image](https://github.com/2211785113/CustomView/blob/master/images/table.jpg)
 
 这种情况下View的specSize是parentSize，而parentSize是父容器中目前可以使用的大小，也就是父容器当前剩余的空间大小。很显然，View的宽高就等于父容器当前剩余的空间大小。这种效果和在布局中使用match_parent完全一致。
 
