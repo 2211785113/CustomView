@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--declare-styleable 自定义属性集合，集合里有很多自定义属性-->
-    <declare-styleable name="CircleView">
-        <attr name="border_width" format="dimension" />
-        <attr name="border_color" format="color" />
-        <!--overlay:是否覆盖在上面-->
-        <attr name="border_overlay" format="boolean" />
-    </declare-styleable>
+  <!--declare-styleable 自定义属性集合，集合里有很多自定义属性-->
+  <declare-styleable name="CircleView">
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
+    <!--overlay:是否覆盖在上面-->
+    <attr name="border_overlay" format="boolean" />
+  </declare-styleable>
 
-    <declare-styleable name="CircleView2">
-        <!-- <attr name="circlePadding" format="dimension"></attr>-->
-    </declare-styleable>
+  <declare-styleable name="CircleView2">
+    <!-- <attr name="circlePadding" format="dimension"></attr>-->
+  </declare-styleable>
 
-    <declare-styleable name="RoundProgressBar">
-        <attr name="roundColor" format="color"></attr>
-        <attr name="roundProgressColor" format="color"></attr>
-        <attr name="roundWidth" format="dimension"></attr>
-        <attr name="max" format="integer"></attr>
-        <attr name="textColor" format="color"></attr>
-        <attr name="textSize" format="dimension"></attr>
-        <attr name="textIsDisplayable" format="boolean"></attr>
-        <attr name="style" format="integer"></attr>
-    </declare-styleable>
+  <declare-styleable name="RoundProgressBar">
+    <attr name="roundColor" format="color"></attr>
+    <attr name="roundProgressColor" format="color"></attr>
+    <attr name="roundWidth" format="dimension"></attr>
+    <attr name="max" format="integer"></attr>
+    <attr name="textColor" format="color"></attr>
+    <attr name="textSize" format="dimension"></attr>
+    <attr name="textIsDisplayable" format="boolean"></attr>
+    <attr name="style" format="integer"></attr>
+  </declare-styleable>
 
-    <declare-styleable name="TextMoveView">
-        <attr name="textMove" format="string"></attr>
-        <attr name="textMoveColor" format="color"></attr>
-        <attr name="textMoveSize" format="dimension"></attr>
-        <!-- <attr name="textMoveWidth" format="dimension"></attr>
-         <attr name="textMoveHeight" format="dimension"></attr>-->
-    </declare-styleable>
+  <declare-styleable name="TextMoveView">
+    <attr name="textMove" format="string"></attr>
+    <attr name="textMoveColor" format="color"></attr>
+    <attr name="textMoveSize" format="dimension"></attr>
+    <!-- <attr name="textMoveWidth" format="dimension"></attr>
+     <attr name="textMoveHeight" format="dimension"></attr>-->
+  </declare-styleable>
 
-    <declare-styleable name="TextMoveView1">
-        <attr name="myText" format="string"></attr>
-        <attr name="myTextColor" format="color"></attr>
-        <attr name="myTextSize" format="dimension"></attr>
-    </declare-styleable>
+  <declare-styleable name="TextMoveView1">
+    <attr name="myText" format="string"></attr>
+    <attr name="myTextColor" format="color"></attr>
+    <attr name="myTextSize" format="dimension"></attr>
+  </declare-styleable>
 
-    <declare-styleable name="searchEditText">
-        <attr name="textHint" format="string"></attr>
-        <attr name="textColorHint" format="color"></attr>
-        <attr name="textSizeHint" format="dimension"></attr>
-        <attr name="iconSpacing" format="dimension"></attr>
-        <attr name="searchIconDimen" format="dimension"></attr>
-        <attr name="searchIcon" format="reference"></attr>
-    </declare-styleable>
+  <declare-styleable name="searchEditText">
+    <attr name="textHint" format="string"></attr>
+    <attr name="textColorHint" format="color"></attr>
+    <attr name="textSizeHint" format="dimension"></attr>
+    <attr name="iconSpacing" format="dimension"></attr>
+    <attr name="searchIconDimen" format="dimension"></attr>
+    <attr name="searchIcon" format="reference"></attr>
+  </declare-styleable>
 
-    <declare-styleable name="PullRefreshLayout">
-        <attr name="refreshColors" format="reference" />
-        <attr name="refreshColor" format="reference" />
-    </declare-styleable>
+  <declare-styleable name="PullRefreshLayout">
+    <attr name="refreshColors" format="reference" />
+    <attr name="refreshColor" format="reference" />
+  </declare-styleable>
 
-    <declare-styleable name="WaveView">
-        <attr name="wave_color" format="color" />
-        <attr name="wave_alpha" format="integer" />
-    </declare-styleable>
+  <declare-styleable name="WaveView">
+    <attr name="wave_color" format="color" />
+    <attr name="wave_alpha" format="integer" />
+  </declare-styleable>
+
+  <declare-styleable name="SearchView">
+    <attr name="height_" format="integer"></attr>
+  </declare-styleable>
 
 </resources>

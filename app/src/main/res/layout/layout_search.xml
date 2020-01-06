@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rl"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/dp_56"
+  android:background="@color/white"
+  android:paddingLeft="@dimen/dp_16"
+  android:paddingTop="@dimen/dp_10"
+  android:paddingRight="@dimen/dp_16"
+  android:paddingBottom="@dimen/dp_10">
+
+  <EditText
+    android:id="@+id/et_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:background="@drawable/edittext_back"
+    android:drawableStart="@drawable/search"
+    android:drawablePadding="@dimen/dp_10"
+    android:hint="@string/search"
+    android:imeOptions="actionSearch"
+    android:inputType="text"
+    android:lines="1"
+    android:paddingStart="@dimen/dp_10"
+    android:textColor="@color/colorBlack"
+    android:textColorHint="@color/darkGray"
+    android:textSize="@dimen/btn_text_size" />
+
+  <ImageView
+    android:id="@+id/btn_clear"
+    android:layout_width="@dimen/dp_10"
+    android:layout_height="@dimen/dp_10"
+    android:layout_alignEnd="@id/et_name"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:src="@drawable/clear"
+    android:visibility="gone" />
+</RelativeLayout>
+
+
+
+
+
+
+

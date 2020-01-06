@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.SearchActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".activity.SearchActivity">
 
-    <com.example.ruru.customview.view.SearchEditText
-        textSizeHint="@dimen/item_text_size"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/colorPrimary"
-        app:iconSpacing="5dp"
-        app:searchIcon="@drawable/search"
-        app:textHint="请输入"
-        app:textSizeHint="@dimen/item_text_size" />
+  <!--<com.example.ruru.customview.view.SearchEditText
+      textSizeHint="@dimen/item_text_size"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColorHint="@color/colorPrimary"
+      app:iconSpacing="5dp"
+      app:searchIcon="@drawable/search"
+      app:textHint="请输入"
+    app:layout_constraintTop_toTopOf="parent"
+      app:textSizeHint="@dimen/item_text_size" />-->
+
+  <com.example.ruru.customview.view.SearchView
+    android:id="@+id/searchView"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    app:height_="200"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"></com.example.ruru.customview.view.SearchView>
 
 </android.support.constraint.ConstraintLayout>

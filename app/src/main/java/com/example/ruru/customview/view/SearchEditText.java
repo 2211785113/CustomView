@@ -15,6 +15,8 @@ import com.example.ruru.customview.R;
  * 仿微信ios搜索框
  * 可以看看github的第一个和第二个
  * 可以再拓展一个ClearEditText
+ *
+ * 自定义View：实现Edittext，自定义图片和文字，并用canvas绘制好
  */
 public class SearchEditText extends AppCompatEditText {
 

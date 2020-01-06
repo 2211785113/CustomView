@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="@dimen/btn_padding">
+        android:padding="@dimen/dp_16">
 
         <Button
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="circle"
             android:text="circleView"
@@ -33,7 +33,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="progress"
             android:text="progressbar"
@@ -42,7 +42,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="myview"
             android:text="textmoveview"
@@ -51,7 +51,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="searchedittext"
             android:text="searchedittext"
@@ -60,7 +60,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="pullrefreshlayout"
             android:text="pullrefreshlayout"
@@ -69,7 +69,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="horizontalscrollviewex"
             android:text="horizontalscrollviewex"
@@ -78,7 +78,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="waveview"
             android:text="waveview"
@@ -87,7 +87,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="moveview"
             android:text="moveview"
@@ -96,7 +96,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="@dimen/btn_padding"
+            android:layout_marginTop="@dimen/dp_16"
             android:background="@color/gray"
             android:onClick="moveview1"
             android:text="moveview1"
