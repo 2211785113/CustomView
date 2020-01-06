@@ -55,9 +55,4 @@
     <attr name="wave_color" format="color" />
     <attr name="wave_alpha" format="integer" />
   </declare-styleable>
-
-  <declare-styleable name="SearchView">
-    <attr name="height_" format="integer"></attr>
-  </declare-styleable>
-
 </resources>

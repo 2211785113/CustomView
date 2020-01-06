@@ -17,11 +17,11 @@
     app:layout_constraintTop_toTopOf="parent"
       app:textSizeHint="@dimen/item_text_size" />-->
 
+  <!--height属性可以控制搜索框的高度，不需要SearchView自定义属性-->
   <com.example.ruru.customview.view.SearchView
     android:id="@+id/searchView"
     android:layout_width="match_parent"
     android:layout_height="56dp"
-    app:height_="200"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"></com.example.ruru.customview.view.SearchView>
 

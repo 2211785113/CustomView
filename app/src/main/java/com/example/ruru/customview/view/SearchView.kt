@@ -27,13 +27,6 @@ class SearchView @JvmOverloads constructor(context: Context, attributeSet: Attri
 
   init {
     initView()
-    context.obtainStyledAttributes(attributeSet, R.styleable.SearchView, defStyleAttr, 0).run {
-      // 这里height_属性没起作用，待研究
-      val rlHeight = DensityUtil.dip2px(context, getInt(R.styleable.SearchView_height_, 56))
-      val params = rl.layoutParams as RelativeLayout.LayoutParams
-      params.height = rlHeight.toInt()
-      recycle()
-    }
   }
 
   private fun initView() {
