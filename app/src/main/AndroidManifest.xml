@@ -11,15 +11,17 @@
     android:theme="@style/AppTheme">
     <activity android:name=".MainActivity"></activity>
     <activity android:name=".activity.ClockActivity" />
-    <activity android:name=".activity.CircleActivity" />
-    <activity android:name=".activity.ProgressActivity" />
-    <activity android:name=".activity.TextMoveActivity" />
-    <activity android:name=".activity.SearchActivity">
+    <activity android:name=".activity.CircleActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+    </activity>
+    <activity android:name=".activity.ProgressActivity" />
+    <activity android:name=".activity.TextMoveActivity" />
+    <activity android:name=".activity.SearchActivity">
+
     </activity>
     <activity android:name=".activity.PullRefreshLayoutActivity" />
     <activity android:name=".activity.HorizontalSVActivity" />

@@ -29,7 +29,8 @@ import com.example.ruru.customview.R;
  * <p>
  * activity-xml中代码：
  * app:border_color="@color/gray"
- * app:border_width="0dp"
+ * app:border_width="1dp"
+ * 代码中需要：setImageDrawable(ContextCompat.get) 或 setImageResource
  */
 public class CircleView extends AppCompatImageView {
 
